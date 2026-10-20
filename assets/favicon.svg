@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Иконка сайта: бордовый круг, буква B и золотая волна (как в логотипе) -->
+  <circle cx="32" cy="32" r="31" fill="#6e1423"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#dcc08a" stroke-width="1.2"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="30" fill="#f6ecd8">B</text>
+  <path d="M18 46l2-2 1.5 3 2-4 1.5 4 2-3c3-3 6-3 9 0s6 3 9 0" fill="none" stroke="#dcc08a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

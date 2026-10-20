@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bellissima voce — онлайн-уроки вокала для взрослых</title>
+  <meta name="description" content="Индивидуальные онлайн-занятия вокалом для взрослых по методике Г. М. Трояновой. Понятные объяснения на основе физиологии и чёткий алгоритм. Разбор голоса бесплатно.">
+  <meta name="theme-color" content="#f3ead8">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <!-- Превью ссылки в Telegram и соцсетях.
+       После публикации заменить путь картинки на полный адрес (https://адрес-сайта/assets/og-image.jpg) и добавить og:url -->
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Bellissima voce — онлайн-уроки вокала для взрослых">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Bellissima voce">
+  <meta property="og:title" content="Bellissima voce — онлайн-уроки вокала для взрослых">
+  <meta property="og:description" content="Пойте легко и свободно — когда понятно, как работает ваш голос. Индивидуально, онлайн, по методике Г. М. Трояновой. Разбор голоса — бесплатно.">
+  <!-- Шрифты хранятся в папке сайта (assets/fonts). Заранее грузим каллиграфию для названия на первом экране -->
+  <link rel="preload" href="assets/fonts/greatvibes-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Метка «скрипты работают»: без неё всё видно сразу, без анимаций появления -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <!-- Левая часть: логотип (при прокрутке) и половина меню -->
+      <div class="header__side header__side--l">
+        <a class="logo" href="#top" aria-label="Bellissima voce — наверх">Bellissima voce<svg viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8l6-5 4 9 5-10 4 11 5-8 6 6c10-7 18-7 28 0s18 7 28 0 18-7 28 0 18 7 28 0 18-7 28 0 10 4 14 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <nav class="nav" aria-label="Меню, часть 1">
+          <a href="#method">Методика</a>
+          <a href="#teacher">Педагог</a>
+        </nav>
+      </div>
+      <!-- Центр: запись -->
+      <a class="link-btn header__btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-header">Билет на пробное</a>
+      <!-- Правая часть: вторая половина меню; на телефоне и планшете — кнопка меню -->
+      <div class="header__side header__side--r">
+        <nav class="nav" aria-label="Меню, часть 2">
+          <a href="#tickets">Билеты</a>
+          <a href="#faq">Вопросы</a>
+        </nav>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mnav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Мобильное меню -->
+    <nav class="mnav" id="mnav" aria-label="Меню" hidden>
+      <svg class="mnav__ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+      <a href="#method">Методика</a>
+      <a href="#teacher">Педагог</a>
+      <a href="#tickets">Билеты</a>
+      <a href="#faq">Вопросы</a>
+      <a class="btn mnav__btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-menu">Разбор голоса — бесплатно</a>
+    </nav>
+  </header>
+
+  <!-- Липкая кнопка записи (телефон) -->
+  <a class="btn sticky-cta is-hidden" id="stickyCta" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-sticky">Билет на пробное</a>
+
+  <main id="top">
+    <!-- ===== Увертюра: первый экран ===== -->
+    <section class="hero" aria-label="Bellissima voce — онлайн-уроки вокала">
+      <div class="beam" aria-hidden="true"></div>
+      <div class="pool" aria-hidden="true"></div>
+      <div class="motes" aria-hidden="true"></div>
+
+      <div class="drape drape--l" aria-hidden="true"><canvas></canvas></div>
+      <div class="drape drape--r" aria-hidden="true"><canvas></canvas></div>
+
+      <div class="invite">
+        <svg class="ornament reveal d1" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+          <path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8"/>
+          <path d="M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8"/>
+          <path d="M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10"/>
+          <path d="M85 30V8M79 14c3-4 9-4 12 0M81 20c2-2 6-2 8 0"/>
+          <circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/>
+          <circle cx="14" cy="35" r="1.6" fill="currentColor" stroke="none"/><circle cx="156" cy="35" r="1.6" fill="currentColor" stroke="none"/>
+        </svg>
+        <p class="kicker reveal d1">Онлайн-студия вокала для взрослых</p>
+        <p class="invite__name reveal d2" lang="it">Bellissima voce</p>
+        <svg class="invite__wave reveal d2" viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8l6-5 4 9 5-10 4 11 5-8 6 6c10-7 18-7 28 0s18 7 28 0 18-7 28 0 18 7 28 0 18-7 28 0 10 4 14 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+        <h1 class="reveal d3">Пойте легко и свободно — <em>когда понятно, как работает ваш голос</em></h1>
+
+        <div class="divider reveal d4" aria-hidden="true">✦</div>
+        <p class="facts reveal d4"><span>Онлайн</span><b>1:1</b><span>Индивидуально</span></p>
+        <div class="divider reveal d4" aria-hidden="true">✦</div>
+        <p class="method reveal d5">По методике Г. М. Трояновой</p>
+
+        <a class="btn reveal d6" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-hero">Разбор голоса — бесплатно</a>
+        <p class="places reveal d6">Набор первых учеников: <b>свободно 5 мест из 5</b></p>
+      </div>
+    </section>
+
+    <!-- ===== Акт I. «Знакомо?» — боли ===== -->
+    <section class="section pains" id="pains" aria-labelledby="pains-title">
+      <div class="container container--narrow">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Акт I</p>
+          <h2 class="section__title" id="pains-title">Знакомо?</h2>
+        </header>
+
+        <ul class="pains__list">
+          <li><span class="pains__num" aria-hidden="true">I</span><q>Петь неудобно — как будто что-то мешает</q></li>
+          <li><span class="pains__num" aria-hidden="true">II</span><q>Не могу управлять своим голосом</q></li>
+          <li><span class="pains__num" aria-hidden="true">III</span><q>Слышу ноту, но не могу в неё попасть</q></li>
+          <li><span class="pains__num" aria-hidden="true">IV</span><q>Голос быстро устаёт — от пения или долгих разговоров на работе</q></li>
+        </ul>
+
+        <div class="divider" aria-hidden="true">✦</div>
+        <p class="pains__bridge">Дело не в таланте и не в возрасте. <em>Чаще всего голосу просто никто понятно не объяснил, что делать.</em></p>
+      </div>
+    </section>
+
+    <!-- ===== Акт II. «Методика» ===== -->
+    <section class="section method-block" id="method" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Акт II · Методика</p>
+          <h2 class="section__title" id="method-title">Физиология <em>вместо метафор</em></h2>
+          <p class="section__lead">Понятные объяснения на основе физиологии и чёткий алгоритм — шаг за шагом.</p>
+        </header>
+
+        <p class="flip-hint">Вам наверняка говорили что-то из этого. Нажмите на карточку — и посмотрите, что на самом деле имелось в виду.</p>
+
+        <div class="flips">
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__tag">Как часто учат</span>
+                <span class="flip__q"><span class="flip__strike">«Представьте горячую картошку во рту»</span></span>
+                <span class="flip__more">Перевернуть ↻</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__tag">Как учу я</span>
+                <span class="flip__title">Что на самом деле происходит</span>
+                <span class="flip__text">Вдох открывает гортань, связки смыкаются и рождается звуковая волна.</span>
+              </span>
+            </span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__tag">Как часто учат</span>
+                <span class="flip__q"><span class="flip__strike">«Уколите звук, как гвоздик»</span></span>
+                <span class="flip__more">Перевернуть ↻</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__tag">Как учу я</span>
+                <span class="flip__title">Что на самом деле происходит</span>
+                <span class="flip__text">Звук должен быть сконцентрированным за счёт энергичного смыкания.</span>
+              </span>
+            </span>
+          </button>
+          <button class="flip" type="button" aria-pressed="false">
+            <span class="flip__inner">
+              <span class="flip__face flip__front">
+                <span class="flip__tag">Как часто учат</span>
+                <span class="flip__q"><span class="flip__strike">«Откройте голову»</span></span>
+                <span class="flip__more">Перевернуть ↻</span>
+              </span>
+              <span class="flip__face flip__back">
+                <span class="flip__tag">Как учу я</span>
+                <span class="flip__title">Что на самом деле происходит</span>
+                <span class="flip__text">Звуковая волна озвучивает резонаторы, и звук становится мощным и полётным.</span>
+              </span>
+            </span>
+          </button>
+        </div>
+
+        <!-- Об авторе методики -->
+        <div class="lineage">
+          <figure class="lineage__photo">
+            <img src="assets/photo/troyanova.jpg" alt="Гертруда Михайловна Троянова, автор методики" width="278" height="462" loading="lazy" decoding="async">
+          </figure>
+          <div class="lineage__text">
+            <div class="lineage__person"><span class="lineage__name">Г. М. Троянова</span><span class="lineage__role">автор методики</span></div>
+            <p class="lineage__note">Методика Гертруды Михайловны Трояновой основана на принципах старых итальянских мастеров: звук рождается в гортани и озвучивает всё тело. Эта методика позволяет озвучивать любой зал — без стресса и физического дискомфорта.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Антракт. «Услышьте разницу» — до / после ===== -->
+    <section class="section proof" id="proof" aria-labelledby="proof-title">
+      <div class="container container--narrow">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Антракт</p>
+          <h2 class="section__title" id="proof-title">Услышьте <em>разницу</em></h2>
+          <p class="section__lead">Это мой голос — до и после занятий по методике. Переключайте и сравнивайте.</p>
+        </header>
+
+        <div class="stagebox" id="stagebox">
+          <!-- занавес открывается, когда блок появляется на экране -->
+          <div class="stagebox__curtain stagebox__curtain--l" aria-hidden="true"></div>
+          <div class="stagebox__curtain stagebox__curtain--r" aria-hidden="true"></div>
+
+          <div class="player" id="player" data-take="before">
+            <div class="player__top">
+              <span class="player__title">Голос до и после</span>
+              <div class="switch" role="group" aria-label="Какую запись слушать">
+                <span class="switch__pill" aria-hidden="true"></span>
+                <button type="button" class="switch__btn" data-take="before" aria-pressed="true">До</button>
+                <button type="button" class="switch__btn" data-take="after" aria-pressed="false">После</button>
+              </div>
+            </div>
+
+            <!-- Записи с YouTube-канала Оксаны (встраивание, без скачивания): «In somno profundo», А. Вивальди -->
+            <div class="player__video" data-take="before" data-youtube="eEp5Au7iwLU">
+              <button type="button" class="player__poster" aria-label="Смотреть запись «до»">
+                <img src="https://i.ytimg.com/vi/eEp5Au7iwLU/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/eEp5Au7iwLU/hqdefault.jpg'" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="player__poster-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5l11 6.5-11 6.5z"/></svg></span>
+                <span class="player__poster-cap">До · «In somno profundo», А. Вивальди</span>
+              </button>
+            </div>
+            <div class="player__video" data-take="after" data-youtube="vj1gRkJRV78" hidden>
+              <button type="button" class="player__poster" aria-label="Смотреть запись «после»">
+                <img src="https://i.ytimg.com/vi/vj1gRkJRV78/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/vj1gRkJRV78/hqdefault.jpg'" alt="" width="1280" height="720" loading="lazy" decoding="async">
+                <span class="player__poster-play" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 1.5l11 6.5-11 6.5z"/></svg></span>
+                <span class="player__poster-cap">После · «In somno profundo», А. Вивальди</span>
+              </button>
+            </div>
+
+            <!-- силуэт волны: «до» — напряжённая, «после» — свободная -->
+            <svg class="player__wave" viewBox="0 0 600 80" preserveAspectRatio="none" aria-hidden="true">
+              <path class="wave--before" d="M0 40l14-12 9 26 12-34 10 38 11-30 13 22 9-28 12 36 10-24 12 18 11-32 13 30 9-20 12 26 10-34 12 28 11-18 13 24 9-30 12 34 10-22 12 16 11-28 13 26 9-18 12 22 10-30 12 32 11-24 13 20 9-26 12 30 10-20 12 14 11-22 13 24 9-16 12 18 10-24 12 26 11-18 13 14 9-12 12 10 10-8"/>
+              <path class="wave--after" d="M0 40c25-26 50-26 75 0s50 26 75 0 50-26 75 0 50 26 75 0 50-26 75 0 50 26 75 0 50-26 75 0 50 26 75 0"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="proof__cta">
+          <a class="btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-proof">Хочу так же</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Акт III. «Ваш педагог» — письмо от Оксаны ===== -->
+    <section class="section teacher" id="teacher" aria-labelledby="teacher-title">
+      <div class="container container--narrow">
+        <article class="letter">
+          <header class="section__head">
+            <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+            <p class="kicker">Акт III · Ваш педагог</p>
+            <h2 class="section__title" id="teacher-title">Меня зовут <em>Оксана</em></h2>
+          </header>
+
+          <figure class="letter__photo">
+            <img src="assets/photo/oksana-teacher.jpg" alt="Оксана — педагог по вокалу" width="520" height="520" loading="lazy" decoding="async">
+          </figure>
+
+          <div class="letter__body">
+            <p>С детства я мечтала петь, но очень долго не могла найти своего педагога — их было десять. И только на занятиях по методике Гертруды Михайловны Трояновой я поняла, как управлять голосом и петь.</p>
+            <p>Я знаю, каково не понимать, чего от вас хотят. Поэтому объясняю так, чтобы каждое упражнение было понятно — без туманных образов.</p>
+            <p>Сейчас я набираю первых пятерых учеников.</p>
+          </div>
+
+          <dl class="letter__facts">
+            <div><dt>5 лет</dt><dd>занятий у Г. М. Трояновой</dd></div>
+            <div><dt>10</dt><dd>педагогов до этого</dd></div>
+          </dl>
+
+          <p class="letter__sign"><span>С теплом,</span> <span class="letter__name">Оксана</span></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Акт IV. «Что изменится» — результат ===== -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Акт IV</p>
+          <h2 class="section__title" id="results-title">Что <em>изменится</em></h2>
+        </header>
+
+        <ol class="results__list">
+          <li><span class="results__num" aria-hidden="true">I</span><h3>Понимание</h3><p>Вы знаете, как устроен голосовой аппарат и где начинается звук.</p></li>
+          <li><span class="results__num" aria-hidden="true">II</span><h3>Управление</h3><p>Вы управляете голосом сами — а не надеетесь, что «попадёт».</p></li>
+          <li><span class="results__num" aria-hidden="true">III</span><h3>Лёгкость</h3><p>Поёте легко, свободно и с удовольствием.</p></li>
+          <li><span class="results__num" aria-hidden="true">IV</span><h3>Сложные произведения</h3><p>Со временем — уверенно справляетесь и со сложным репертуаром.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== Программа вечера: как проходит пробное ===== -->
+    <section class="section trial" id="trial" aria-labelledby="trial-title">
+      <div class="container container--narrow">
+        <div class="programme">
+          <header class="section__head">
+            <p class="kicker">Программа вечера</p>
+            <h2 class="section__title" id="trial-title">Как проходит <em>разбор голоса</em></h2>
+            <p class="section__lead">Бесплатное пробное занятие — без оценок и без обязательств.</p>
+          </header>
+
+          <ol class="programme__list">
+            <li><span class="programme__no">I</span><span class="programme__name">Знакомство</span><span class="programme__dots" aria-hidden="true"></span><span class="programme__text">вы рассказываете о себе и о том, чего хотите от голоса</span></li>
+            <li><span class="programme__no">II</span><span class="programme__name">Слушаю голос</span><span class="programme__dots" aria-hidden="true"></span><span class="programme__text">вы поёте или говорите — я слышу, что мешает</span></li>
+            <li><span class="programme__no">III</span><span class="programme__name">Как устроен голос</span><span class="programme__dots" aria-hidden="true"></span><span class="programme__text">рассказываю о работе голосового аппарата и объясняю, как работает методика</span></li>
+            <li><span class="programme__no">IV</span><span class="programme__name">Первое упражнение</span><span class="programme__dots" aria-hidden="true"></span><span class="programme__text">пробуете на себе — уже на этом занятии</span></li>
+            <li><span class="programme__no">V</span><span class="programme__name">План</span><span class="programme__dots" aria-hidden="true"></span><span class="programme__text">рассказываю, как будем работать дальше</span></li>
+          </ol>
+
+          <p class="programme__meta"><span>60 минут</span><span aria-hidden="true">✦</span><span>Онлайн: Zoom или Яндекс Телемост</span></p>
+
+          <div class="programme__cta">
+            <a class="btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-trial">Взять билет на пробное</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Билеты — формат и стоимость ===== -->
+    <section class="section tickets" id="tickets" aria-labelledby="tickets-title">
+      <div class="container">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Билеты</p>
+          <h2 class="section__title" id="tickets-title">Выберите своё <em>место в зале</em></h2>
+          <p class="section__lead">Все занятия — онлайн, один на один, 60 минут, в Zoom или Яндекс Телемосте.</p>
+        </header>
+
+        <div class="tickets__row">
+          <article class="ticket ticket--main">
+            <span class="ticket__badge">Первые ученики</span>
+            <span class="ticket__kind">8 занятий · месяц</span>
+            <h3 class="ticket__title">Месяц с голосом</h3>
+            <p class="ticket__price"><s>16 000 ₽</s> 12 000 ₽</p>
+            <ul class="ticket__list">
+              <li>Для первых 5 учеников — в обмен на отзыв</li>
+              <li>Обычная цена — 2 000 ₽ за занятие</li>
+              <li>Свободно мест: 5 из 5</li>
+            </ul>
+            <div class="ticket__stub"><span>Партер · лучшие места</span><a href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-ticket-month">Взять →</a></div>
+          </article>
+
+          <article class="ticket">
+            <span class="ticket__kind">Пробное занятие</span>
+            <h3 class="ticket__title">Разбор вашего голоса</h3>
+            <p class="ticket__price">Бесплатно</p>
+            <ul class="ticket__list">
+              <li>Знакомимся и слушаем ваш голос</li>
+              <li>Объясняю, как работает методика</li>
+              <li>Первое упражнение и план</li>
+            </ul>
+            <div class="ticket__stub"><span>Ряд 1 · место 1</span><a href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-ticket-trial">Взять →</a></div>
+          </article>
+
+          <article class="ticket">
+            <span class="ticket__kind">Одно занятие</span>
+            <h3 class="ticket__title">Разовое занятие</h3>
+            <p class="ticket__price">2 500 ₽</p>
+            <ul class="ticket__list">
+              <li>Онлайн, один на один</li>
+              <li>Когда хочется точечно</li>
+            </ul>
+            <div class="ticket__stub"><span>Ряд 5 · место 12</span><a href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-ticket-single">Взять →</a></div>
+          </article>
+        </div>
+
+        <div class="tickets__terms">
+          <p><b>Бонус 48 часов.</b> Оплатите месяц в течение 48 часов после пробного — получите запись-разбор вашего голоса.</p>
+          <p><b>Гарантия.</b> Если после первых 2 оплаченных занятий не станет понятнее — верну деньги за оставшиеся.</p>
+        </div>
+
+        <!-- Готовое первое сообщение: t.me не подставляет текст, поэтому — «Скопировать» -->
+        <div class="message">
+          <div class="message__text">
+            <h3>Сделать первый шаг — не страшно</h3>
+            <p>Скопируйте сообщение, откройте Telegram и вставьте его.</p>
+            <blockquote id="firstMessage">Здравствуйте, Оксана! Хочу записаться на бесплатный разбор голоса.
+О себе: пою [для себя / для сцены / пока не пою].
+Удобное время: …</blockquote>
+          </div>
+          <div class="message__actions">
+            <button class="btn btn--ghost" id="copyMessage" type="button" data-goal="copy-message">Скопировать</button>
+            <a class="btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-message">Открыть Telegram</a>
+            <p class="message__status" id="copyStatus" aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Частые сомнения ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container container--narrow">
+        <header class="section__head">
+          <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+          <p class="kicker">Перед началом</p>
+          <h2 class="section__title" id="faq-title">Частые <em>сомнения</em></h2>
+        </header>
+
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Мне уже поздно начинать?</summary>
+            <p>Я занимаюсь со взрослыми — от 18 лет и без верхней границы. Голос работает по законам физиологии, а понять их можно в любом возрасте.</p>
+          </details>
+          <details class="faq__item">
+            <summary>А если у меня ничего не получится?</summary>
+            <p>Поэтому мы и не работаем с туманными образами. У методики чёткий алгоритм: вы каждый раз понимаете, что делаете и зачем. Начните с бесплатного разбора голоса — и почувствуйте сами. А если после первых двух оплаченных занятий не станет понятнее, я верну деньги за оставшиеся.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Я стесняюсь звука своего голоса</summary>
+            <p>Это очень частое чувство, и ничего страшного в нём нет. Занятия индивидуальные — только вы и я, без оценок и без зрителей. Я сама долго искала педагога, с которым будет спокойно.</p>
+          </details>
+          <details class="faq__item">
+            <summary>У меня нет слуха</summary>
+            <p>Многие говорят: «Слышу ноту, но не могу в неё попасть». Часто дело не в слухе, а в том, что голосом пока не умеют управлять. Этому мы и учимся.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Разве вокалу можно учиться онлайн?</summary>
+            <p>Да. Занятия проходят один на один по видеосвязи — в Zoom или Яндекс Телемосте. Нужен интернет и спокойное место, где можно петь.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Сколько длится занятие и сколько стоит?</summary>
+            <p>Каждое занятие — 60 минут. Разбор голоса — бесплатно, разовое занятие — 2 500 ₽, месяц из 8 занятий — 16 000 ₽, а для первых пяти учеников — 12 000 ₽. <a href="#tickets">Посмотреть билеты</a></p>
+          </details>
+        </div>
+
+        <div class="faq__cta">
+          <p>Остались вопросы? Напишите — отвечу лично.</p>
+          <a class="btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-faq">Написать в Telegram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Финал — снова сцена ===== -->
+    <section class="finale" aria-labelledby="finale-title">
+      <div class="beam" aria-hidden="true"></div>
+      <div class="pool" aria-hidden="true"></div>
+      <div class="drape drape--l" aria-hidden="true"><canvas></canvas></div>
+      <div class="drape drape--r" aria-hidden="true"><canvas></canvas></div>
+
+      <div class="invite">
+        <svg class="ornament" viewBox="0 0 170 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"><path d="M85 30c-6-10-20-14-30-8-8 5-6 15 2 15 6 0 7-7 2-8M85 30c6-10 20-14 30-8 8 5 6 15-2 15-6 0-7-7-2-8M60 24c-14-2-30 4-44 10M110 24c14-2 30 4 44 10M85 30V8"/><circle cx="85" cy="5" r="2.2" fill="currentColor" stroke="none"/></svg>
+        <p class="kicker">Финал</p>
+        <h2 class="finale__title" id="finale-title">Ваше место в зале свободно</h2>
+        <p class="finale__lead">Напишите мне в Telegram — договоримся о бесплатном разборе голоса.</p>
+        <a class="btn" href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-finale">Разбор голоса — бесплатно</a>
+        <p class="places">Набор первых учеников: <b>свободно 5 мест из 5</b></p>
+        <!-- Сюда позже: «Пока не готовы? Подпишитесь на Telegram-канал» — когда появится канал -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Подвал ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a class="footer__logo" href="#top" aria-label="Bellissima voce — наверх">Bellissima voce<svg viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8l6-5 4 9 5-10 4 11 5-8 6 6c10-7 18-7 28 0s18 7 28 0 18-7 28 0 18 7 28 0 18-7 28 0 10 4 14 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <p class="footer__line">Онлайн-уроки вокала для взрослых · по методике Г. М. Трояновой</p>
+      <p class="footer__contacts">
+        <a href="https://t.me/oxanna23" target="_blank" rel="noopener" data-goal="tg-footer">Telegram: @oxanna23</a>
+      </p>
+      <p class="footer__copy">© <span id="year">2026</span> Bellissima voce · Оксана</p>
+    </div>
+  </footer>
+
+  <script src="js/curtain.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
